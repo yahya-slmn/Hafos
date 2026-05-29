@@ -1931,3 +1931,36 @@ h1 em {
     right: 14px;
   }
 }
+
+/* ============================================================
+   FINAL STORY SECTION DESKTOP FIX
+   Keeps the story intro copy under the title instead of floating
+   to the far right on wide screens.
+   ============================================================ */
+.story-head {
+  display: block !important;
+  max-width: 1180px;
+  margin: 0 auto 46px !important;
+}
+
+.story-head>div {
+  max-width: 760px;
+}
+
+.story-head>p {
+  max-width: 680px !important;
+  margin-top: 24px !important;
+  margin-left: 0 !important;
+}
+
+@media (max-width: 980px) {
+  .story-head {
+    max-width: 100%;
+    margin-bottom: 36px !important;
+  }
+
+  .story-head>p {
+    max-width: 100% !important;
+    margin-top: 18px !important;
+  }
+}
