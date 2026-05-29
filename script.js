@@ -1,5 +1,5 @@
 /* ============================================================
-   HAFOS — portfolio interactions
+   HAFSA — portfolio interactions
    ============================================================ */
 
 const loader = document.getElementById('loader');

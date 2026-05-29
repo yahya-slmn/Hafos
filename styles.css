@@ -1,5 +1,5 @@
 /* ============================================================
-   HAFOS — Dubai Editorial Portfolio
+   HAFSA — Dubai Editorial Portfolio
    Tokyo-noir × Dubai luxury · 9:16 portrait imagery
    ============================================================ */
 
@@ -445,7 +445,8 @@ h1 em {
 .hero {
   display: grid;
   grid-template-columns: minmax(0, 1.05fr) minmax(340px, .9fr);
-  gap: 56px;
+  grid-template-rows: auto auto;
+  gap: 26px 56px;
   align-items: center;
   min-height: 100svh;
   overflow: hidden;
@@ -467,9 +468,22 @@ h1 em {
   z-index: 0;
 }
 
-.hero-copy {
+.hero-copy,
+.hero-details {
   position: relative;
   z-index: 2;
+}
+
+.hero-copy {
+  grid-column: 1;
+  grid-row: 1;
+  align-self: end;
+}
+
+.hero-details {
+  grid-column: 1;
+  grid-row: 2;
+  align-self: start;
 }
 
 .hero h1 {
@@ -540,6 +554,8 @@ h1 em {
   display: grid;
   place-items: center;
   z-index: 2;
+  grid-column: 2;
+  grid-row: 1 / span 2;
 }
 
 .cover-card {
@@ -1447,7 +1463,15 @@ h1 em {
 @media (max-width: 1180px) {
   .hero {
     grid-template-columns: 1fr;
+    grid-template-rows: auto;
     gap: 40px;
+  }
+
+  .hero-copy,
+  .hero-details,
+  .hero-stage {
+    grid-column: 1;
+    grid-row: auto;
   }
 
   .side-polaroid.one {
@@ -1482,8 +1506,13 @@ h1 em {
     flex-direction: column;
     align-items: stretch;
     justify-content: center;
-    padding: clamp(96px, 16vh, 140px) clamp(28px, 9vw, 90px) 40px;
-    background: radial-gradient(circle at 78% 16%, rgba(212, 21, 42, .2), transparent 46%), radial-gradient(circle at 10% 88%, rgba(201, 168, 106, .08), transparent 40%), rgba(8, 6, 7, .98);
+    min-height: 100svh;
+    height: 100dvh;
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    justify-content: flex-start;
+    padding: clamp(88px, 13vh, 116px) clamp(28px, 9vw, 90px) 34px;
+    background: radial-gradient(circle at 78% 16%, rgba(212, 21, 42, .2), transparent 46%), radial-gradient(circle at 10% 88%, rgba(201, 168, 106, .08), transparent 40%), #080607;
     backdrop-filter: blur(26px);
     transform: translateX(100%);
     opacity: 0;
@@ -1608,6 +1637,12 @@ h1 em {
     display: block;
   }
 
+  body.menu-open .site-header {
+    background: #080607;
+    border-bottom-color: var(--line);
+    backdrop-filter: blur(22px);
+  }
+
   .signature-grid {
     grid-template-columns: 1fr 1fr;
   }
@@ -1676,8 +1711,9 @@ h1 em {
   }
 
   .hero {
-    gap: 30px;
-    padding-top: 116px;
+    gap: 22px;
+    padding-top: 92px;
+    min-height: auto;
   }
 
   .hero-word {
@@ -1686,7 +1722,11 @@ h1 em {
   }
 
   .hero h1 {
-    font-size: clamp(54px, 17vw, 88px);
+    font-size: clamp(70px, 20vw, 96px);
+  }
+
+  .hero-lead {
+    margin-top: 8px;
   }
 
   .hero-actions .btn,
@@ -1715,9 +1755,9 @@ h1 em {
   }
 
   .cover-card {
-    width: min(330px, 86vw);
-    aspect-ratio: 9 / 15;
-    max-height: none;
+    width: min(320px, 82vw);
+    aspect-ratio: 9 / 13;
+    max-height: 52svh;
     transform: none;
   }
 
@@ -1788,6 +1828,15 @@ h1 em {
     max-width: 86vw;
   }
 
+  .ss-nav,
+  .ss-controls {
+    display: none !important;
+  }
+
+  .slide-info {
+    margin-top: -6px;
+  }
+
   .booking-image {
     aspect-ratio: 16 / 12;
     max-height: 44vh;
@@ -1809,7 +1858,7 @@ h1 em {
   }
 
   .cover-name {
-    font-size: 42px;
+    font-size: 44px;
   }
 
   .cover-footer {
@@ -1819,5 +1868,66 @@ h1 em {
 
   .cover-kicker {
     display: none;
+  }
+}
+
+/* ============================================================
+   MOBILE CLEAN BRAND FIX — H mark + hide cover title on image
+   ============================================================ */
+
+.brand-mark {
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  display: inline-grid;
+  place-items: center;
+  border: 1px solid rgba(201, 168, 106, .38);
+  background:
+    radial-gradient(circle at 32% 22%, rgba(243, 236, 225, .16), transparent 34%),
+    linear-gradient(145deg, rgba(212, 21, 42, .16), rgba(255, 255, 255, .035));
+  box-shadow: 0 14px 34px rgba(0, 0, 0, .28);
+  letter-spacing: 0;
+}
+
+.h-logo {
+  font-family: var(--display);
+  font-size: 29px;
+  line-height: 1;
+  font-weight: 900;
+  color: var(--bone);
+  font-style: italic;
+  transform: translateY(-1px);
+  text-shadow: 0 0 18px rgba(212, 21, 42, .28);
+}
+
+.h-logo::after {
+  content: "";
+  display: block;
+  width: 18px;
+  height: 2px;
+  margin: -2px auto 0;
+  border-radius: 999px;
+  background: linear-gradient(90deg, var(--blood), var(--gold));
+}
+
+@media (max-width: 680px) {
+  .brand-mark {
+    width: 42px !important;
+    height: 42px !important;
+  }
+
+  .h-logo {
+    font-size: 27px !important;
+  }
+
+  .hero .cover-card .cover-name {
+    display: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+  }
+
+  .hero .cover-issue {
+    top: 14px;
+    right: 14px;
   }
 }
