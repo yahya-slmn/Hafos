@@ -7,11 +7,11 @@
   <title>Hafsa — Dubai Editorial &amp; Runway Model</title>
   <meta name="description"
     content="Dubai-based fashion model Hafsa. A cinematic editorial, beauty, runway and lifestyle presence shaped with Tokyo-noir attitude and refined luxury detail." />
-  <meta name="theme-color" content="#0a0708" />
+  <meta name="theme-color" content="#090607" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
-    href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,500;0,6..96,600;0,6..96,700;0,6..96,800;0,6..96,900;1,6..96,400;1,6..96,500&family=DM+Mono:wght@400;500&family=Manrope:wght@300;400;500;600;700;800&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,500;0,6..96,600;0,6..96,700;1,6..96,400;1,6..96,500;1,6..96,600&family=DM+Mono:wght@400;500&family=Manrope:wght@300;400;500;600;700&display=swap"
     rel="stylesheet">
   <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
   <link rel="preload" as="image" href="assets/slide-06.jpg" fetchpriority="high">
@@ -21,10 +21,11 @@
 <body>
   <!-- LOADER -->
   <div class="loader" id="loader" aria-hidden="true">
-    <div class="loader-ring"></div>
-    <div class="loader-mark">
-      <strong>HAF<em>SA</em></strong>
-      <span>Dubai · Editorial · Runway</span>
+    <div class="loader-inner">
+      <span class="loader-eyebrow">Dubai · Editorial · Runway</span>
+      <div class="loader-mark"><span class="loader-h">H</span></div>
+      <span class="loader-name">HAFSA</span>
+      <span class="loader-rule"></span>
     </div>
   </div>
 
@@ -34,8 +35,10 @@
 
   <!-- HEADER -->
   <header class="site-header" id="siteHeader">
-    <a class="brand brand-mark" href="#home" aria-label="Hafsa home"><span class="h-logo">H</span></a>
+    <a class="brand brand-mark" href="#home" aria-label="Hafsa — home"><span class="h-logo">H</span></a>
+
     <nav class="nav" id="nav" aria-label="Main navigation">
+      <span class="nav-label">Menu</span>
       <a href="#home"><i>01</i> Home</a>
       <a href="#signature"><i>02</i> Signature</a>
       <a href="#story"><i>03</i> Story</a>
@@ -44,15 +47,14 @@
       <div class="nav-extra">
         <a class="btn primary" href="#booking"><i class='bx bx-calendar-star'></i> Book Hafsa</a>
         <div class="nav-social">
-          <a href="https://instagram.com/" target="_blank" rel="noopener" aria-label="Instagram"><i
-              class='bx bxl-instagram'></i></a>
-          <a href="https://wa.me/000000000000" target="_blank" rel="noopener" aria-label="WhatsApp"><i
-              class='bx bxl-whatsapp'></i></a>
+          <a href="https://instagram.com/" target="_blank" rel="noopener" aria-label="Instagram"><i class='bx bxl-instagram'></i></a>
+          <a href="https://wa.me/000000000000" target="_blank" rel="noopener" aria-label="WhatsApp"><i class='bx bxl-whatsapp'></i></a>
           <a href="mailto:booking@example.com" aria-label="Email"><i class='bx bx-envelope'></i></a>
         </div>
         <p class="nav-note">Based in Dubai, UAE · Available for travel</p>
       </div>
     </nav>
+
     <a class="header-cta" href="#booking">Book Hafsa <i class='bx bx-right-arrow-alt'></i></a>
     <button class="menu-btn" id="menuBtn" type="button" aria-label="Open menu" aria-expanded="false">
       <span></span><span></span><span></span>
@@ -60,7 +62,7 @@
   </header>
 
   <main>
-    <!-- HERO / INTRO -->
+    <!-- HERO -->
     <section class="hero section" id="home">
       <div class="hero-word" aria-hidden="true">TOKYO</div>
 
@@ -72,25 +74,26 @@
       <div class="hero-stage reveal">
         <div class="cover-card">
           <span class="cover-issue">Issue Nº 01</span>
-          <img src="assets/slide-06.jpg" alt="Hafsa editorial Dubai fashion portrait" fetchpriority="high"
-            decoding="async">
+          <img src="assets/slide-06.jpg" alt="Hafsa editorial Dubai fashion portrait" fetchpriority="high" decoding="async">
           <div class="cover-name">HAFSA</div>
           <div class="cover-kicker left">Dubai<br>Noir</div>
           <div class="cover-kicker right">Tokyo<br>Energy</div>
           <div class="cover-footer">The New Editorial Muse</div>
           <div class="cover-bar"><span>Fashion</span><span>Beauty</span><span>Runway</span></div>
         </div>
-        <figure class="side-polaroid one"><img src="assets/slide-04.jpg" alt="Hafsa runway look">
+        <figure class="side-polaroid one">
+          <img src="assets/slide-04.jpg" alt="Hafsa runway look" loading="lazy" decoding="async">
           <figcaption>Runway Energy</figcaption>
         </figure>
-        <figure class="side-polaroid two"><img src="assets/slide-01.jpg" alt="Hafsa summer portrait">
+        <figure class="side-polaroid two">
+          <img src="assets/slide-01.jpg" alt="Hafsa summer portrait" loading="lazy" decoding="async">
           <figcaption>Soft Glamour</figcaption>
         </figure>
       </div>
 
       <div class="hero-details reveal">
-        <p class="hero-lead">Short-hair confidence, cinematic Tokyo attitude and a fashion
-          presence engineered for beauty, runway, luxury lifestyle and bold editorial stories.</p>
+        <p class="hero-lead">Short-hair confidence, cinematic Tokyo attitude and a fashion presence
+          engineered for beauty, runway, luxury lifestyle and bold editorial stories.</p>
 
         <div class="hero-actions">
           <a class="btn primary magnetic" href="#portfolio"><i class='bx bx-images'></i> View the Gallery</a>
@@ -112,14 +115,8 @@
     <!-- TICKER -->
     <section class="ticker" aria-label="Signature style keywords">
       <div class="ticker-track">
-        <span>Dubai Based Model</span><i>✦</i><span>Editorial Muse</span><i>✦</i><span>Tokyo Energy</span><i>✦</i><span>Beauty
-          Campaigns</span><i>✦</i><span>Runway Presence</span><i>✦</i><span>Fashion Storytelling</span><i>✦</i><span>Luxury
-          Lifestyle</span><i>✦</i><span>Short-Hair Signature</span><i>✦</i><span>Red Carpet Mood</span><i>✦</i><span>Cinematic
-          Frames</span><i>✦</i>
-        <span>Dubai Based Model</span><i>✦</i><span>Editorial Muse</span><i>✦</i><span>Tokyo Energy</span><i>✦</i><span>Beauty
-          Campaigns</span><i>✦</i><span>Runway Presence</span><i>✦</i><span>Fashion Storytelling</span><i>✦</i><span>Luxury
-          Lifestyle</span><i>✦</i><span>Short-Hair Signature</span><i>✦</i><span>Red Carpet Mood</span><i>✦</i><span>Cinematic
-          Frames</span><i>✦</i>
+        <span>Dubai Based Model</span><i>✦</i><span>Editorial Muse</span><i>✦</i><span>Tokyo Energy</span><i>✦</i><span>Beauty Campaigns</span><i>✦</i><span>Runway Presence</span><i>✦</i><span>Fashion Storytelling</span><i>✦</i><span>Luxury Lifestyle</span><i>✦</i><span>Short-Hair Signature</span><i>✦</i><span>Red Carpet Mood</span><i>✦</i><span>Cinematic Frames</span><i>✦</i>
+        <span>Dubai Based Model</span><i>✦</i><span>Editorial Muse</span><i>✦</i><span>Tokyo Energy</span><i>✦</i><span>Beauty Campaigns</span><i>✦</i><span>Runway Presence</span><i>✦</i><span>Fashion Storytelling</span><i>✦</i><span>Luxury Lifestyle</span><i>✦</i><span>Short-Hair Signature</span><i>✦</i><span>Red Carpet Mood</span><i>✦</i><span>Cinematic Frames</span><i>✦</i>
       </div>
     </section>
 
@@ -154,11 +151,10 @@
       </div>
     </section>
 
-    <!-- MODEL CARD / STATS -->
+    <!-- MODEL CARD -->
     <section class="statband" aria-label="Model card">
       <div class="statband-head reveal">
         <p class="eyebrow"><span class="dot"></span> Model Card</p>
-      
       </div>
       <div class="stat-grid">
         <div class="stat reveal"><span>Height</span><strong>178 cm</strong></div>
@@ -177,13 +173,13 @@
           <p class="eyebrow"><span class="dot"></span> Visual Story</p>
           <h2>From warm daylight<br>to dramatic <em>noir.</em></h2>
         </div>
-        <p>Her visual world moves as one refined story — beauty, fashion and pure
-          presence, carried from soft daylight into cinematic Dubai noir.</p>
+        <p>Her visual world moves as one refined story — beauty, fashion and pure presence,
+          carried from soft daylight into cinematic Dubai noir.</p>
       </div>
 
-      <div class="story-grid reveal">
+      <div class="story-grid reveal" id="storyGrid">
         <figure class="story-card">
-          <img src="assets/slide-07.jpg" alt="Hafsa beauty editorial portrait" loading="lazy">
+          <img src="assets/slide-07.jpg" alt="Hafsa beauty editorial portrait" loading="lazy" decoding="async">
           <figcaption>
             <span class="sc-kicker">01 — Beauty</span>
             <strong>Quiet Editorial</strong>
@@ -191,7 +187,7 @@
           </figcaption>
         </figure>
         <figure class="story-card">
-          <img src="assets/slide-08.jpg" alt="Hafsa fashion studio portrait" loading="lazy">
+          <img src="assets/slide-08.jpg" alt="Hafsa fashion studio portrait" loading="lazy" decoding="async">
           <figcaption>
             <span class="sc-kicker">02 — Fashion</span>
             <strong>Green Blazer</strong>
@@ -199,7 +195,7 @@
           </figcaption>
         </figure>
         <figure class="story-card">
-          <img src="assets/slide-11.jpg" alt="Hafsa presence mirror portrait" loading="lazy">
+          <img src="assets/slide-11.jpg" alt="Hafsa presence mirror portrait" loading="lazy" decoding="async">
           <figcaption>
             <span class="sc-kicker">03 — Presence</span>
             <strong>Mirror Muse</strong>
@@ -207,14 +203,17 @@
           </figcaption>
         </figure>
       </div>
+
+      <div class="story-dots" id="storyDots" aria-hidden="true"></div>
     </section>
 
-    <!-- GALLERY / SLIDESHOW (auto 2s · swipe on mobile · excludes intro & contact images) -->
+    <!-- GALLERY -->
     <section class="portfolio section" id="portfolio">
       <div class="section-heading reveal">
         <p class="eyebrow"><span class="dot"></span> Editorial Gallery</p>
         <h2>A cinematic <em>gallery.</em></h2>
-        <p>A curated gallery of editorial frames capturing Hafsa’s beauty presence, fashion attitude, and cinematic Dubai luxury.</p>
+        <p>A curated sequence of editorial frames — beauty, fashion attitude and the quiet
+          confidence of Dubai luxury, composed like the pages of a magazine.</p>
       </div>
 
       <div class="slideshow reveal" id="slideshow">
@@ -222,34 +221,32 @@
           <div class="slides" id="slides">
             <figure class="slide active" data-cat="Lifestyle" data-title="Mirror Flash"
               data-caption="Intimate self-shot styling with a confident model edge.">
-              <img src="assets/slide-02.jpg" alt="Mirror Flash"></figure>
+              <img src="assets/slide-02.jpg" alt="Mirror Flash" decoding="async"></figure>
             <figure class="slide" data-cat="Beauty" data-title="Soft Bloom"
               data-caption="Romantic expression, soft texture and feminine editorial energy.">
-              <img src="assets/slide-03.jpg" alt="Soft Bloom" loading="lazy"></figure>
+              <img src="assets/slide-03.jpg" alt="Soft Bloom" loading="lazy" decoding="async"></figure>
             <figure class="slide" data-cat="Event" data-title="Event Elegance"
               data-caption="Polished event styling with a clean, luxury mood.">
-              <img src="assets/slide-05.jpg" alt="Event Elegance" loading="lazy"></figure>
+              <img src="assets/slide-05.jpg" alt="Event Elegance" loading="lazy" decoding="async"></figure>
             <figure class="slide" data-cat="Editorial" data-title="Quiet Editorial"
               data-caption="Indoor mood, warm light and reflective beauty framing.">
-              <img src="assets/slide-07.jpg" alt="Quiet Editorial" loading="lazy"></figure>
+              <img src="assets/slide-07.jpg" alt="Quiet Editorial" loading="lazy" decoding="async"></figure>
             <figure class="slide" data-cat="Fashion" data-title="Green Blazer"
               data-caption="Structured styling, a strong gaze and modern magazine composition.">
-              <img src="assets/slide-08.jpg" alt="Green Blazer" loading="lazy"></figure>
+              <img src="assets/slide-08.jpg" alt="Green Blazer" loading="lazy" decoding="async"></figure>
             <figure class="slide" data-cat="Presence" data-title="Power Seat"
               data-caption="A full-body pose with relaxed confidence and editorial posture.">
-              <img src="assets/slide-09.jpg" alt="Power Seat" loading="lazy"></figure>
+              <img src="assets/slide-09.jpg" alt="Power Seat" loading="lazy" decoding="async"></figure>
             <figure class="slide" data-cat="Lifestyle" data-title="Pink Scene"
               data-caption="Lifestyle glamour, soft colour and a strong frame composition.">
-              <img src="assets/slide-10.jpg" alt="Pink Scene" loading="lazy"></figure>
+              <img src="assets/slide-10.jpg" alt="Pink Scene" loading="lazy" decoding="async"></figure>
             <figure class="slide" data-cat="Presence" data-title="Mirror Muse"
               data-caption="Elegant back view, reflection storytelling and feminine styling.">
-              <img src="assets/slide-11.jpg" alt="Mirror Muse" loading="lazy"></figure>
+              <img src="assets/slide-11.jpg" alt="Mirror Muse" loading="lazy" decoding="async"></figure>
           </div>
           <span class="ss-count"><b id="ssIndex">01</b> / 08</span>
-          <button class="ss-nav prev" id="ssPrev" type="button" aria-label="Previous"><i
-              class='bx bx-chevron-left'></i></button>
-          <button class="ss-nav next" id="ssNext" type="button" aria-label="Next"><i
-              class='bx bx-chevron-right'></i></button>
+          <button class="ss-nav prev" id="ssPrev" type="button" aria-label="Previous"><i class='bx bx-chevron-left'></i></button>
+          <button class="ss-nav next" id="ssNext" type="button" aria-label="Next"><i class='bx bx-chevron-right'></i></button>
           <div class="ss-progress"><span id="ssBar"></span></div>
         </div>
 
@@ -259,33 +256,28 @@
           <p id="ssCaption">Intimate self-shot styling with a confident model edge.</p>
           <div class="ss-dots" id="ssDots" role="tablist" aria-label="Choose a frame"></div>
           <div class="ss-controls">
-            <button class="ss-btn" id="ssPrev2" type="button" aria-label="Previous"><i
-                class='bx bx-chevron-left'></i></button>
-            <button class="ss-btn play" id="ssPlay" type="button" aria-label="Pause slideshow"><i
-                class='bx bx-pause'></i></button>
-            <button class="ss-btn" id="ssNext2" type="button" aria-label="Next"><i
-                class='bx bx-chevron-right'></i></button>
-            <span class="ss-hint"><i class='bx bx-move-horizontal'></i> Swipe</span>
+            <button class="ss-btn" id="ssPrev2" type="button" aria-label="Previous"><i class='bx bx-chevron-left'></i></button>
+            <button class="ss-btn play" id="ssPlay" type="button" aria-label="Pause slideshow"><i class='bx bx-pause'></i></button>
+            <button class="ss-btn" id="ssNext2" type="button" aria-label="Next"><i class='bx bx-chevron-right'></i></button>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- BOOKING / CONTACT -->
+    <!-- BOOKING -->
     <section class="booking section" id="booking">
       <div class="booking-card reveal">
-        <figure class="booking-image"><img src="assets/slide-04.jpg" alt="Hafsa runway booking visual"></figure>
+        <figure class="booking-image"><img src="assets/slide-04.jpg" alt="Hafsa runway booking visual" loading="lazy" decoding="async"></figure>
         <div class="booking-copy">
           <p class="eyebrow"><span class="dot"></span> Booking &amp; Collaboration</p>
           <h2>Available for editorial, beauty, fashion &amp; <em>runway.</em></h2>
-          
+          <p>For campaigns, magazine editorials, runway and luxury lifestyle — Hafsa is based in
+            Dubai and available worldwide on request.</p>
+
           <div class="contact-actions">
-            <a class="btn primary magnetic" href="mailto:booking@example.com"><i class='bx bx-envelope'></i> Email
-              Booking</a>
-            <a class="btn ghost magnetic" href="https://www.instagram.com/toukyo_tt/" target="_blank" rel="noopener"><i
-                class='bx bxl-instagram'></i> Instagram</a>
-            <a class="btn ghost magnetic" href="https://wa.me/000000000000" target="_blank" rel="noopener"><i
-                class='bx bxl-whatsapp'></i> WhatsApp</a>
+            <a class="btn primary magnetic" href="mailto:booking@example.com"><i class='bx bx-envelope'></i> Email Booking</a>
+            <a class="btn ghost magnetic" href="https://www.instagram.com/toukyo_tt/" target="_blank" rel="noopener"><i class='bx bxl-instagram'></i> Instagram</a>
+            <a class="btn ghost magnetic" href="https://wa.me/000000000000" target="_blank" rel="noopener"><i class='bx bxl-whatsapp'></i> WhatsApp</a>
           </div>
           <p class="booking-meta">Based in Dubai, UAE · Available for travel · Response within 24h</p>
         </div>
@@ -295,10 +287,9 @@
 
   <footer class="footer">
     <div class="footer-row">
-      <a class="brand brand-mark footer-brand" href="#home" aria-label="Hafsa home"><span class="h-logo">H</span></a>
+      <a class="brand brand-mark footer-brand" href="#home" aria-label="Hafsa — home"><span class="h-logo">H</span></a>
       <nav class="footer-nav">
-        <a href="#home">Home</a><a href="#signature">Signature</a><a href="#story">Story</a><a
-          href="#portfolio">Gallery</a><a href="#booking">Booking</a>
+        <a href="#home">Home</a><a href="#signature">Signature</a><a href="#story">Story</a><a href="#portfolio">Gallery</a><a href="#booking">Booking</a>
       </nav>
     </div>
     <p>© <span id="year"></span> Hafsa — All rights reserved. Crafted by Yahya Sleiman.</p>
